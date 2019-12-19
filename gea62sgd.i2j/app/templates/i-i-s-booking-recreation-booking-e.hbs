@@ -1,0 +1,111 @@
+<h3 class="ui header">{{t 'forms.i-i-s-booking-recreation-booking-e.caption'}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=model.errors}}
+    </div>
+  </div>
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button type="submit" class="ui button save-button" {{action 'save'}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button type="submit" class="ui button save-del-button" {{action 'delete'}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button type="submit" class="ui button close-button" {{action 'close'}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field">
+  <label>{{t 'forms.i-i-s-booking-recreation-booking-e.dateStart-caption'}}</label>
+  {{
+    flexberry-datepicker
+    placeholder=(t 'components.flexberry-datepicker.placeholder')
+    readonly=readonly
+    value=model.dateStart
+    class=(if model.errors.dateStart 'error' '')
+  }}
+  {{flexberry-validationmessage error=model.errors.dateStart pointing="pointing"}}
+</div>
+
+<div class="field">
+  <label>{{t 'forms.i-i-s-booking-recreation-booking-e.dateEnd-caption'}}</label>
+  {{
+    flexberry-datepicker
+    placeholder=(t 'components.flexberry-datepicker.placeholder')
+    readonly=readonly
+    value=model.dateEnd
+    class=(if model.errors.dateEnd 'error' '')
+  }}
+  {{flexberry-validationmessage error=model.errors.dateEnd pointing="pointing"}}
+</div>
+
+<div class="field">
+  <label>{{t 'forms.i-i-s-booking-recreation-booking-e.recreation-caption'}}</label>
+  {{
+    flexberry-lookup
+    choose='showLookupDialog'
+    remove='removeLookupValue'
+    value=model.recreation
+    
+    relationName='recreation'
+    projection='RecreationL'
+    title=(t 'forms.i-i-s-booking-recreation-booking-e.recreation-caption')
+    readonly=readonly
+    componentName="recreationLookup"
+  }}
+  {{flexberry-validationmessage error=model.errors.recreation pointing="pointing"}}
+</div>
+
+<div class="field">
+  {{
+    flexberry-field
+    placeholder=(t 'components.flexberry-field.placeholder')
+    readonly=true
+    required=true
+    value=model.recreation.phone
+    class=(if model.errors.recreation.phone 'error' '')
+    label=(t 'forms.i-i-s-booking-recreation-booking-e.recreation.phone-caption')
+  }}
+  {{flexberry-validationmessage error=model.errors.recreation.phone pointing="pointing"}}
+</div>
+
+<div class="field">
+  <label>{{t 'forms.i-i-s-booking-recreation-booking-e.client-caption'}}</label>
+  {{
+    flexberry-lookup
+    choose='showLookupDialog'
+    remove='removeLookupValue'
+    value=model.client
+    
+    relationName='client'
+    projection='ApplicationUserL'
+    title=(t 'forms.i-i-s-booking-recreation-booking-e.client-caption')
+    readonly=readonly
+    componentName="clientLookup"
+  }}
+  {{flexberry-validationmessage error=model.errors.client pointing="pointing"}}
+</div>
+
+<div class="field">
+  {{
+    flexberry-field
+    placeholder=(t 'components.flexberry-field.placeholder')
+    readonly=true
+    required=true
+    value=model.client.phone
+    class=(if model.errors.client.phone 'error' '')
+    label=(t 'forms.i-i-s-booking-recreation-booking-e.client.phone-caption')
+  }}
+  {{flexberry-validationmessage error=model.errors.client.phone pointing="pointing"}}
+</div>
+
+</form>

@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-booking-recreation-booking-e",
+  "editForm": "i-i-s-booking-recreation-booking-e",
+  "external": false,
+  "caption": "Booking",
+  "name": "IISBookingRecreationBookingL",
+  "className": "BookingL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "booking",
+      "modelProjection": "BookingL"
+    }
+  ]
+}

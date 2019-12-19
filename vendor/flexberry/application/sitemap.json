@@ -1,0 +1,36 @@
+﻿{
+  "applicationCaption": "Booking recreation",
+  "applicationTitle": "Booking recreation",
+  "items": [
+    {
+      "link": null,
+      "menuName": "booking-recreation",
+      "caption": "BookingRecreation",
+      "title": "BookingRecreation",
+      "children": [
+        {
+          "link": "i-i-s-booking-recreation-booking-l",
+          "menuName": null,
+          "caption": "Бронирование",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-booking-recreation-recreation-l",
+          "menuName": null,
+          "caption": "Базы отдыха",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-booking-recreation-application-user-l",
+          "menuName": null,
+          "caption": "Пользователи",
+          "title": "",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}

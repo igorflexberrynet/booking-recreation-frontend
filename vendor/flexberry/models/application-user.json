@@ -1,0 +1,117 @@
+﻿{
+  "name": "ApplicationUser",
+  "modelName": "application-user",
+  "className": "ApplicationUser",
+  "nameSpace": "",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "phone",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "email",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "isAdmin",
+      "type": "boolean",
+      "flexberryType": "bool",
+      "notNull": false,
+      "defaultValue": "false",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "name",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ApplicationUserE",
+      "modelName": "application-user",
+      "attrs": [
+        {
+          "name": "phone",
+          "caption": "Phone",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "email",
+          "caption": "Email",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "isAdmin",
+          "caption": "Is admin",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "name",
+          "caption": "Name",
+          "hidden": false,
+          "index": 3
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "ApplicationUserL",
+      "modelName": "application-user",
+      "attrs": [
+        {
+          "name": "phone",
+          "caption": "Phone",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "email",
+          "caption": "Email",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "isAdmin",
+          "caption": "Is admin",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "name",
+          "caption": "Name",
+          "hidden": false,
+          "index": 3
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

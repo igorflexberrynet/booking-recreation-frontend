@@ -1,0 +1,77 @@
+﻿{
+  "name": "IISBookingRecreationRecreationEmployee",
+  "modelName": "i-i-s-booking-recreation-recreation-employee",
+  "className": "RecreationEmployee",
+  "nameSpace": "IIS.BookingRecreation",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "recreationAdmin",
+      "type": "boolean",
+      "flexberryType": "bool",
+      "notNull": false,
+      "defaultValue": "false",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "user",
+      "relatedTo": "application-user",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "recreation",
+      "relatedTo": "recreation",
+      "inverse": "employees"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "RecreationEmployeeE",
+      "modelName": "i-i-s-booking-recreation-recreation-employee",
+      "attrs": [
+        {
+          "name": "recreationAdmin",
+          "caption": "Recreation admin",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "Phone",
+          "lookupValueField": "phone",
+          "relationName": "User",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "phone",
+              "caption": "Phone",
+              "hidden": true,
+              "index": 2
+            }
+          ],
+          "index": 1,
+          "type": "standard",
+          "caption": "User",
+          "name": "user",
+          "relatedTo": "application-user",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

@@ -1,0 +1,23 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": "user",
+      "displayAttributeName": "phone",
+      "required": true,
+      "relationName": "Employees.User",
+      "projection": "ApplicationUserL",
+      "detailModelName": "i-i-s-booking-recreation-recreation-employee"
+    }
+  ],
+  "external": false,
+  "caption": "Recreation",
+  "name": "IISBookingRecreationRecreationE",
+  "className": "RecreationE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "recreation",
+      "modelProjection": "RecreationE"
+    }
+  ]
+}

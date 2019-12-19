@@ -1,4 +1,0 @@
-import IISBookingRecreationApplicationUserEController from '../i-i-s-booking-recreation-application-user-e';
-
-var IISBookingRecreationApplicationUserENewController = IISBookingRecreationApplicationUserEController;
-export default IISBookingRecreationApplicationUserENewController;
